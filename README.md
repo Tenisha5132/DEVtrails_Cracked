@@ -2,7 +2,7 @@
 
 #  ShieldRun — AI-Powered Secure Parametric Income Insurance for Food Delivery Partners
 
-> **Guidewire DEVTrails 2026** | Team: [Your Team Name] | Persona: Food Delivery (Zomato / Swiggy)
+> **Guidewire DEVTrails 2026** | Team: [CRACKED] | Persona: Food Delivery (Zomato / Swiggy)
 
 ---
 
