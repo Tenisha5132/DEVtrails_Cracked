@@ -22,7 +22,7 @@ India's food delivery partners are the last mile of the digital economy — yet 
 
 ---
 
-## 👤 Persona & Scenarios
+## Persona & Scenarios
 
 **Primary Persona:** Arjun, a Zomato delivery partner in Mumbai
 
@@ -155,7 +155,7 @@ ShieldRun's model selection runs at **two distinct levels**. Most teams pick one
 
 ---
 
-#### 📊 Level 1 — Pretrained Base Model Comparison (3 Candidates)
+#### Level 1 — Pretrained Base Model Comparison (3 Candidates)
 
 Training a risk model from scratch requires years of labelled insurance claim data that doesn't exist yet for India's gig sector. Instead, we start with a **pretrained weather/climate foundation model** and extract its internal embeddings as rich input features — rather than raw weather numbers — giving our model a massive head start.
 
@@ -201,12 +201,12 @@ Partner Behavioral Profile (working hours, zone, platform)
 
 Most insurance risk models score at a city level. HGRS scores at **pincode + time-of-day + platform + season** level:
 
-| Zone | Time | Month | Platform | Risk Score |
-|---|---|---|---|---|
-| Dharavi, Mumbai | 6 PM | July | Zomato | 87 — Extreme |
-| Bandra, Mumbai | 10 AM | December | Swiggy | 12 — Low |
-| Connaught Place, Delhi | 2 PM | May | Amazon Flex | 74 — High |
-| Koramangala, Bengaluru | 8 PM | March | Swiggy | 31 — Moderate |
+| Zone                   | Time  | Month    | Platform    | Risk Score    |
+|------------------------|-------|----------|-------------|---------------|
+| Dharavi, Mumbai        | 6 PM  | July     | Zomato      | 87 — Extreme  |
+| Bandra, Mumbai         | 10 AM | December | Swiggy      | 12 — Low      |
+| Connaught Place, Delhi | 2 PM  | May      | Amazon Flex | 74 — High     | 
+| Koramangala, Bengaluru | 8 PM  | March    | Swiggy      | 31 — Moderate |
 
 #### Self-Improving Feedback Loop
 
@@ -222,7 +222,7 @@ Claim Verified & Paid → Confirmed Disruption Event
 
 ---
 
-### 4. 📊 Level 2 — Final Production Model Comparison (5 Candidates)
+### 4. Level 2 — Final Production Model Comparison (5 Candidates)
 
 Once HGRS is built, it competes against 4 classical ML baselines on the **same India gig dataset**. We do not assume HGRS wins — we prove it.
 
@@ -255,7 +255,7 @@ The model with the best combined score across **RMSE + AUC-ROC + SHAP** is deplo
 
 This is ShieldRun's original fraud prevention mechanism, purpose-built for food delivery workflows.
 
-#### 🔑 The Core Idea
+#### The Core Idea
 
 Every pickup location (restaurant / dark kitchen / cloud hub) has a **static Location Key** permanently registered in ShieldRun's system. Every day, the delivery partner receives a **time-bound Daily OTP** pushed directly to their **Zomato / Swiggy / Amazon delivery account** — the same app they already use to accept orders.
 
@@ -286,7 +286,7 @@ When a disruption claim is being evaluated, the system performs a **two-point ke
 └─────────────────────────────────────────────────────────┘
 ```
 
-#### 📍 How It Works Step by Step
+#### How It Works Step by Step
 
 | Step | Event | What ShieldRun Records |
 |---|---|---|
@@ -296,7 +296,7 @@ When a disruption claim is being evaluated, the system performs a **two-point ke
 | **4. Drop-off (OUT)** | Delivery marked complete in platform app | OUT timestamp recorded, delivery window closed |
 | **5. Claim Check** | Disruption event timestamp cross-checked against IN→OUT window | If disruption falls within verified window → claim is legitimate |
 
-#### 🚨 Fraud Scenarios This Catches
+#### Fraud Scenarios This Catches
 
 | Fraud Attempt | How Dual-Key Stops It |
 |---|---|
@@ -306,7 +306,7 @@ When a disruption claim is being evaluated, the system performs a **two-point ke
 | Two partners sharing the same OTP | OTP is single-use, tied to one account → second use flagged immediately |
 | GPS spoofing (fake location) | Location key at pickup is static and hardware-bound — spoofed GPS won't produce a valid key match |
 
-#### 🤖 AI Layer on Top — Isolation Forest Anomaly Detection
+#### AI Layer on Top — Isolation Forest Anomaly Detection
 
 Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass on every claim:
 
@@ -315,7 +315,7 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 - **Cross-partner check:** Multiple partners claiming the same disruption event from the same pickup location in an unusually short window → collusion flag
 - **Output:** Fraud Risk Score (0–100). Score > 70 → auto-reject + flag for insurer review
 
-#### 🔐 Key Security Properties
+#### Key Security Properties
 
 - Daily OTPs are generated using **HMAC-SHA256** — cryptographically signed, cannot be guessed or forged
 - Location static keys are **stored encrypted (AES-256)** in the backend — never exposed client-side
@@ -328,7 +328,7 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 
 ---
 
-## 🖥️ Platform Choice: Mobile-First Web App (PWA)
+## Platform Choice: Mobile-First Web App (PWA)
 
 **Rationale:**
 - Food delivery partners primarily use smartphones (Android, budget tier)
@@ -399,7 +399,7 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 
 ---
 
-## 📊 Key Metrics (Analytics Dashboard — Planned)
+## Key Metrics (Analytics Dashboard — Planned)
 
 **For Workers:**
 - Total earnings protected this week
@@ -416,9 +416,9 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 
 ---
 
-## 🔐 What We Explicitly Do NOT Cover
+## We Do NOT Cover
 
-Per hackathon constraints, ShieldRun strictly excludes:
+As per hackathon constraints, ShieldRun strictly excludes:
 -  Health or medical insurance
 -  Life insurance
 -  Accident coverage
@@ -427,7 +427,7 @@ Per hackathon constraints, ShieldRun strictly excludes:
 
 ---
 
-## 🔒 Security Architecture
+## Security Architecture
 
 Security is not an afterthought in ShieldRun — it is foundational. We are handling sensitive financial data, GPS location, payout credentials, and insurance policy records for millions of gig workers. Every layer of the stack is designed with security-first principles.
 
@@ -454,7 +454,7 @@ const isValid = await bcrypt.compare(inputPassword, hashedPassword);
 
 ---
 
-### 2. 🪙 Blockchain — Immutable Claim & Policy Ledger
+### 2. Blockchain — Immutable Claim & Policy Ledger
 
 Every policy issuance, parametric trigger event, and payout is recorded on a **private blockchain ledger**. This prevents tampering, ensures auditability, and makes fraud significantly harder.
 
@@ -494,7 +494,7 @@ function createBlock(eventData, previousHash) {
 
 ---
 
-### 3. 🔐 Data Encryption — At Rest & In Transit
+### 3. Data Encryption — At Rest & In Transit
 
 **In Transit (HTTPS / TLS 1.3):**
 - All API communication enforces **TLS 1.3** — older protocols (TLS 1.0, 1.1, SSL) are explicitly rejected
@@ -523,7 +523,7 @@ decrypted_upi = cipher.decrypt(encrypted_upi.encode()).decode()
 
 ---
 
-### 4. 🛡️ Application Security
+### 4. Application Security
 
 **Authentication & Authorization:**
 - **JWT (JSON Web Tokens)** with short expiry (15 min access token + 7-day refresh token)
@@ -544,7 +544,7 @@ decrypted_upi = cipher.decrypt(encrypted_upi.encode()).decode()
 
 ---
 
-### 5. 📍 GPS & Location Data Privacy
+### 5. GPS & Location Data Privacy
 
 Partner GPS data is used only for fraud validation — not stored long-term.
 
@@ -554,22 +554,22 @@ Partner GPS data is used only for fraud validation — not stored long-term.
 
 ---
 
-### 6. 🔍 Security Summary Table
+### 6. Security Summary Table
 
-| Layer | Technology | Protection |
-|---|---|---|
-| Passwords | bcrypt (cost=12) | Brute-force resistant credential storage |
-| Sensitive DB fields | AES-256-CBC + AWS KMS | Encrypted at rest, key rotation supported |
-| API transport | TLS 1.3 + HSTS | Encrypted in transit, no downgrade attacks |
-| Auth tokens | JWT + httpOnly cookies | XSS-resistant session management |
-| Claim/policy records | Hyperledger Fabric blockchain | Tamper-proof, auditable event ledger |
-| API abuse | Rate limiting + WAF | DDoS and injection attack prevention |
-| GPS data | Zone-hashing + 24hr TTL | Location privacy by design |
-| Secrets | AWS Secrets Manager / KMS | No hardcoded credentials anywhere |
+| Layer                | Technology                    | Protection                                 |
+|----------------------|-------------------------------|--------------------------------------------|
+| Passwords            | bcrypt (cost=12)              | Brute-force resistant credential storage   |
+| Sensitive DB fields  | AES-256-CBC + AWS KMS         | Encrypted at rest, key rotation supported  |
+| API transport        | TLS 1.3 + HSTS                | Encrypted in transit, no downgrade attacks |
+| Auth tokens          | JWT + httpOnly cookies        | XSS-resistant session management           |
+| Claim/policy records | Hyperledger Fabric blockchain | Tamper-proof, auditable event ledger       |
+| API abuse            | Rate limiting + WAF           | DDoS and injection attack prevention       |
+| GPS data             | Zone-hashing + 24hr TTL       | Location privacy by design                 |
+| Secrets              | AWS Secrets Manager / KMS     | No hardcoded credentials anywhere          |
 
 ---
 
-## 🗂️ Repository Structure (Planned)
+## Repository Structure (Planned)
 
 ```
 shieldrun/
@@ -586,16 +586,16 @@ shieldrun/
 
 ---
 
-## 👥 Team
+## Team
 
 | Name |
 ---
-BALLA TENISHAAKHILA
-B Kalidasan
-Suggu Jhansi Lakshmi
-Saavanrajeev
-B Nachiketh Gupta
-
+- BALLA TENISHAAKHILA
+- B Kalidasan
+- Suggu Jhansi Lakshmi
+- Saavanrajeev
+- B Nachiketh Gupta
+---
 ## 🎬 Phase 1 Demo Video
 
 > 📹 [Link to 2-minute strategy video — to be added before March 20 EOD]
@@ -603,5 +603,3 @@ B Nachiketh Gupta
 The video covers our persona research, the ShieldRun concept, the weekly premium model, our parametric trigger design, and a walkthrough of our Phase 1 prototype scope.
 
 ---
-
-*Built for Guidewire DEVTrails 2026 — Seed. Scale. Soar.*
