@@ -1,22 +1,22 @@
 # DEVtrails_Cracked
 
-# 🛵 ShieldRun — AI-Powered Secure Parametric Income Insurance for Food Delivery Partners
+#  ShieldRun — AI-Powered Secure Parametric Income Insurance for Food Delivery Partners
 
 > **Guidewire DEVTrails 2026** | Team: [Your Team Name] | Persona: Food Delivery (Zomato / Swiggy)
 
 ---
 
-## 🎯 The Problem
+##  The Problem
 
 India's food delivery partners are the last mile of the digital economy — yet they are the most financially exposed. A single bad weather day in Mumbai, a civic strike in Bengaluru, or a heavy-rain evening in Chennai can wipe out an entire day's earnings with zero recourse. No safety net. No fallback. No claim to file.
 
 **This isn't hypothetical. It's already happening — repeatedly, at scale:**
 
-🌡️ **The 2024 Delhi Heatwave** — Delhi recorded its highest-ever temperature in 2024, touching 52.9°C. Delivery workers had no choice but to keep riding through dangerous conditions because missing assignments meant losing earnings or facing penalties. Not a single rupee of income protection existed for hours lost to the heat.
+**The 2024 Delhi Heatwave** — Delhi recorded its highest-ever temperature in 2024, touching 52.9°C. Delivery workers had no choice but to keep riding through dangerous conditions because missing assignments meant losing earnings or facing penalties. Not a single rupee of income protection existed for hours lost to the heat.
 
-🚫 **All-India Gig Worker Strike, Dec 31 2025** — Workers across Zomato, Swiggy, Blinkit, Zepto, Amazon and Flipkart walked off on New Year's Eve — one of the highest-demand nights of the year — over falling wages, safety risks, and zero income protection. 50–60% of deliveries were delayed across major cities. The workers who didn't strike lost a full peak-earnings day with zero recourse.
+ **All-India Gig Worker Strike, Dec 31 2025** — Workers across Zomato, Swiggy, Blinkit, Zepto, Amazon and Flipkart walked off on New Year's Eve — one of the highest-demand nights of the year — over falling wages, safety risks, and zero income protection. 50–60% of deliveries were delayed across major cities. The workers who didn't strike lost a full peak-earnings day with zero recourse.
 
-📉 **The Scale of the Gap** — India's gig workforce has grown to an estimated 12 million workers as of FY 2024–25 and is projected to reach 23.5 million by 2030. Yet the Fairwork India Report 2024 found that none of the 11 major platforms reviewed could ensure a living wage for their workers — and on-ground social security protections remain largely absent despite new regulations requiring platforms to contribute to a social security fund.
+ **The Scale of the Gap** — India's gig workforce has grown to an estimated 12 million workers as of FY 2024–25 and is projected to reach 23.5 million by 2030. Yet the Fairwork India Report 2024 found that none of the 11 major platforms reviewed could ensure a living wage for their workers — and on-ground social security protections remain largely absent despite new regulations requiring platforms to contribute to a social security fund.
 
 **ShieldRun fills exactly this gap** — not with policy promises, but with automated, parametric payouts triggered the moment a disruption is detected. No form. No wait. No argument.
 
@@ -46,7 +46,7 @@ India's food delivery partners are the last mile of the digital economy — yet 
 
 ---
 
-## 🏗️ Application Workflow
+##  Application Workflow
 
 ```
 [Worker Onboards on ShieldRun App]
@@ -68,7 +68,7 @@ India's food delivery partners are the last mile of the digital economy — yet 
 
 ---
 
-## 💰 Weekly Premium Model
+##  Weekly Premium Model
 
 Our financial model is structured **100% on a weekly basis** to match the gig worker's earnings cycle.
 
@@ -101,7 +101,7 @@ Weekly Premium = Base Rate × Zone Multiplier × Season Factor × (1 - Loyalty D
 
 ---
 
-## ⚡ Parametric Triggers (Automated — Zero Touch)
+## Parametric Triggers (Automated — Zero Touch)
 
 Parametric insurance pays out based on **objective data conditions**, not manual claims. ShieldRun monitors 5 real-time data streams:
 
@@ -119,7 +119,7 @@ Parametric insurance pays out based on **objective data conditions**, not manual
 
 ---
 
-## 🤖 AI/ML Integration Plan
+##  AI/ML Integration Plan
 
 ### 1. Dynamic Premium Calculation
 - **Model:** Gradient Boosted Regression (XGBoost)
@@ -131,7 +131,7 @@ Parametric insurance pays out based on **objective data conditions**, not manual
 - **Inputs:** Delivery zone, avg daily hours, platform (Zomato/Swiggy), historical city disruption data
 - **Output:** Risk Score (Low / Medium / High) used to assign base plan
 
-### 3. 🧠 Hyperlocal Gig Risk Scorer (HGRS) — Our Custom Algorithm
+### 3.  Hyperlocal Gig Risk Scorer (HGRS) — Our Custom Algorithm
 
 This is ShieldRun's core ML innovation — a novel risk scoring algorithm built on top of pretrained foundation models using **transfer learning**, purpose-designed for India's gig economy.
 
@@ -419,11 +419,11 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 ## 🔐 What We Explicitly Do NOT Cover
 
 Per hackathon constraints, ShieldRun strictly excludes:
-- ❌ Health or medical insurance
-- ❌ Life insurance
-- ❌ Accident coverage
-- ❌ Vehicle repair or maintenance payouts
-- ❌ Any manual/subjective claim — all triggers are parametric and data-driven
+-  Health or medical insurance
+-  Life insurance
+-  Accident coverage
+-  Vehicle repair or maintenance payouts
+-  Any manual/subjective claim — all triggers are parametric and data-driven
 
 ---
 
@@ -433,7 +433,7 @@ Security is not an afterthought in ShieldRun — it is foundational. We are hand
 
 ---
 
-### 1. 🔑 Password & Credential Hashing
+### 1. Password & Credential Hashing
 
 All user credentials are **never stored in plaintext** — ever.
 
@@ -588,15 +588,13 @@ shieldrun/
 
 ## 👥 Team
 
-| Name | Role |
-|---|---|
-| [Member 1] | Frontend Lead (React/PWA) |
-| [Member 2] | Backend Lead (Node.js/APIs) |
-| [Member 3] | AI/ML Engineer (Python/sklearn) |
-| [Member 4] | Full Stack + DevOps |
-| [Member 5] | Product Design + Research |
-
+| Name |
 ---
+BALLA TENISHAAKHILA
+B Kalidasan
+Suggu Jhansi Lakshmi
+Saavanrajeev
+B Nachiketh Gupta
 
 ## 🎬 Phase 1 Demo Video
 
