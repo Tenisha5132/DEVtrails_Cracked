@@ -18,7 +18,7 @@ India's food delivery partners are the last mile of the digital economy — yet 
 
  **The Scale of the Gap** — India's gig workforce has grown to an estimated 12 million workers as of FY 2024–25 and is projected to reach 23.5 million by 2030. Yet the Fairwork India Report 2024 found that none of the 11 major platforms reviewed could ensure a living wage for their workers — and on-ground social security protections remain largely absent despite new regulations requiring platforms to contribute to a social security fund.
 
-**ShieldRun fills exactly this gap** — not with policy promises, but with automated, parametric payouts triggered the moment a disruption is detected. No form. No wait. No argument.
+**ShieldRun fills exactly this gap** — not with policy promises, but with an intelligent system that models earning potential and compensates only the verified loss of earning opportunity in real time. No form. No wait. No argument.
 
 ---
 
@@ -48,6 +48,8 @@ India's food delivery partners are the last mile of the digital economy — yet 
 
 ##  Application Workflow
 
+ShieldRun does not assume income loss from disruptions — it estimates what a worker should have earned and compensates only the verified gap.
+
 ```
 [Worker Onboards on ShieldRun App]
         ↓
@@ -57,11 +59,13 @@ India's food delivery partners are the last mile of the digital economy — yet 
         ↓
 [Real-Time Trigger Monitoring: Weather + AQI + Traffic + Platform APIs]
         ↓
-[Disruption Detected → Parametric Trigger Fired Automatically]
+[Disruption Detected → System Automatically Initiates Evaluation]
         ↓
-[AI Fraud Engine Validates: GPS, Activity, Claim Pattern]
+[Estimate Expected Earnings (E) vs Track Actual Earnings (A)]
         ↓
-[Instant Payout to UPI / Wallet — Zero Manual Claim Needed]
+[Fraud Validation + Effort & Confidence Score Evaluated]
+        ↓
+[Instant Payout based on Verified Loss of Earning Opportunity — Zero Manual Claim Needed]
         ↓
 [Dashboard Updated: Worker Sees Earnings Protected]
 ```
@@ -103,17 +107,19 @@ Weekly Premium = Base Rate × Zone Multiplier × Season Factor × (1 - Loyalty D
 
 ## Parametric Triggers (Automated — Zero Touch)
 
-Parametric insurance pays out based on **objective data conditions**, not manual claims. ShieldRun monitors 5 real-time data streams:
+A purely parametric system assumes every event equals a loss — ShieldRun uses a **Hybrid Parametric + Outcome-Based System**. Parametric triggers initiate the evaluation process based on **objective data conditions**, rather than immediately dispatching a fixed payout.
 
-| Trigger | API Source | Threshold | Payout |
+| Trigger | API Source | Threshold | Action |
 |---|---|---|---|
-| Heavy Rain | OpenWeatherMap / IMD API | > 15mm/hr in partner's pincode | Daily earnings × 80% |
-| Extreme Heat | OpenWeatherMap | Temp > 42°C for 3+ hrs | Daily earnings × 50% |
-| Hazardous AQI | CPCB AQI API (mock) | AQI > 300 | Daily earnings × 60% |
-| Civic Strike/Bandh | Government alert feed (mock) | Verified zone lockdown | Daily earnings × 100% |
-| Platform Outage | Zomato/Swiggy status mock API | Downtime > 2 hrs | Daily earnings × 90% |
+| Heavy Rain | OpenWeatherMap / IMD API | > 15mm/hr in partner's pincode | Triggers Evaluation |
+| Extreme Heat | OpenWeatherMap | Temp > 42°C for 3+ hrs | Triggers Evaluation |
+| Hazardous AQI | CPCB AQI API (mock) | AQI > 300 | Triggers Evaluation |
+| Civic Strike/Bandh | Government alert feed (mock) | Verified zone lockdown | Triggers Evaluation |
+| Platform Outage | Zomato/Swiggy status mock API | Downtime > 2 hrs | Triggers Evaluation |
 
-**Claim Initiation:** Fully automatic. Partner receives a push notification: *"Heavy rain detected in your zone. Your claim is being processed."*
+> **Note:** **“Triggers initiate evaluation, not payout — ensuring that only real income loss leads to compensation, not assumptions.”** We model earning potential, not just events. Payout is based on verified loss of earning opportunity.
+
+**Claim Initiation:** Fully automatic. Partner receives a push notification: *"Heavy rain detected in your zone. Evaluating income impact for potential payout."*
 
 **No form filling. No document upload. No waiting.**
 
@@ -131,9 +137,31 @@ Parametric insurance pays out based on **objective data conditions**, not manual
 - **Inputs:** Delivery zone, avg daily hours, platform (Zomato/Swiggy), historical city disruption data
 - **Output:** Risk Score (Low / Medium / High) used to assign base plan
 
-### 3.  Hyperlocal Gig Risk Scorer (HGRS) — Our Custom Algorithm
+### 3. Hybrid Earning Prediction Engine
 
-This is ShieldRun's core ML innovation — a novel risk scoring algorithm built on top of pretrained foundation models using **transfer learning**, purpose-designed for India's gig economy.
+Disruptions do not uniformly reduce income — they reshape earning distributions. Our system adapts to variability across time, zone, and behavior. We evaluate the true loss of earning opportunity through a combination of a Personal Model and a Global Model:
+
+**Payout = max(0, Expected Earnings − Actual Earnings) × Effort × Confidence**
+*If Actual Earnings ≥ Expected Earnings → No payout is triggered.*
+
+This effectively models a counterfactual scenario — what the worker would have earned if the disruption had not occurred.
+
+- **Expected Earnings (E)**: Modeled actively before payout. **Expected Earnings represents the estimated income under normal working conditions, adjusted for real-time event impact to avoid overestimating loss.**
+  `E = BaseRate × Hours × Demand × EventImpact × ZoneFactor`
+  - **Personal Model**: Learns user behavior, earnings pattern, and working hours.
+  - **Global Model**: Learns event impact, zone demand, and time-based variations. **This approach allows ShieldRun to handle real-world variability across time, location, platform demand, and worker behavior — making payouts adaptive rather than assumption-driven.**
+  - **BaseRate**: user's earning per hour.
+  - **Hours**: expected working duration.
+  - **Demand**: probability of orders.
+  - **EventImpact**: how disruption affects earnings (*Note: EventImpact is NOT always negative. Some events can increase earnings*).
+  - **ZoneFactor**: area productivity.
+- **Actual Earnings (A)**: Derived from verified activity (based on deliveries, timestamps, GPS).
+- **Effort Score (S)**: Range [0,1]. Based on login duration, acceptance rate, and movement consistency to prevent low-effort exploitation.
+- **Confidence Score (C)**: Range [0,1]. Based on trigger reliability, fraud detection, and location certainty.
+
+### 4. Hyperlocal Gig Risk Scorer (HGRS) — Our Supporting Global Intelligence Model
+
+This is ShieldRun's supporting global intelligence model — a novel risk scoring algorithm built on top of pretrained foundation models using **transfer learning**, purpose-designed for India's gig economy.
 
 ShieldRun's model selection runs at **two distinct levels**. Most teams pick one model and ship it. We run a structured comparison at every layer and always deploy the proven best.
 
@@ -222,7 +250,7 @@ Claim Verified & Paid → Confirmed Disruption Event
 
 ---
 
-### 4. Level 2 — Final Production Model Comparison (5 Candidates)
+### 5. Level 2 — Final Production Model Comparison (5 Candidates)
 
 Once HGRS is built, it competes against 4 classical ML baselines on the **same India gig dataset**. We do not assume HGRS wins — we prove it.
 
@@ -251,7 +279,7 @@ The model with the best combined score across **RMSE + AUC-ROC + SHAP** is deplo
 
 > **Why this matters for regulators:** IRDAI increasingly requires AI-driven pricing to be auditable. By running SHAP explainability alongside accuracy metrics at both levels, ShieldRun is built for regulatory compliance from day one — not retrofitted later.
 
-### 3. Fraud Detection Engine — Dual-Key Location Verification System
+### 6. Fraud Detection Engine — Dual-Key Location Verification System
 
 This is ShieldRun's original fraud prevention mechanism, purpose-built for food delivery workflows.
 
@@ -313,7 +341,11 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 - **Velocity check:** More than 3 claims in 4 weeks → manual review flag
 - **Pattern check:** Claims suspiciously clustered on Monday mornings or just before policy renewal → flagged
 - **Cross-partner check:** Multiple partners claiming the same disruption event from the same pickup location in an unusually short window → collusion flag
+- **Effort Score Validation:** Ensures movement consistency and high acceptance rate. Drops in effort score immediately discount the payout multiplier to catch low-effort exploitation.
+- **Confidence Score Integration:** Evaluates trigger reliability and location certainty, acting as a direct probability modifier.
 - **Output:** Fraud Risk Score (0–100). Score > 70 → auto-reject + flag for insurer review
+
+**This ensures that payouts are not only validated for authenticity, but also adjusted based on the worker’s actual effort during the disruption window.**
 
 #### Key Security Properties
 
@@ -322,9 +354,23 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 - All IN/OUT timestamp events are **written to the blockchain ledger** — immutable, auditable, tamper-proof
 - Raw GPS trail is **hashed to zone-level** and auto-deleted after 24 hours — privacy by design
 
-### 4. Predictive Disruption Forecasting (Phase 3)
+### 7. Predictive Disruption Forecasting (Phase 3)
 - **Model:** LSTM time-series model trained on 3 years of IMD weather data
 - **Purpose:** Predict high-risk weeks in advance, enable proactive partner alerts
+
+---
+
+### ⚙️ From Event-Based to Outcome-Based Protection
+
+```text
+Traditional parametric systems:
+Disruption → Fixed Payout
+
+ShieldRun:
+Disruption → Impact on Earnings → Verified Loss → Payout
+```
+
+**By shifting from event-based payouts to outcome-based evaluation, ShieldRun transforms parametric insurance into an adaptive, intelligence-driven income protection system.**
 
 ---
 
@@ -402,6 +448,8 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 ## Key Metrics (Analytics Dashboard — Planned)
 
 **For Workers:**
+- Expected vs Actual earnings breakdown
+- Effort score display and trust visibility
 - Total earnings protected this week
 - Active coverage status + renewal date
 - Payout history timeline
@@ -591,9 +639,9 @@ shieldrun/
 | Name |
 ---
 - BALLA TENISHAAKHILA
-- B Kalidasan
+- Kalidasan B
 - Suggu Jhansi Lakshmi
-- Saavanrajeev
+- Saavan Rajeev
 - B Nachiketh Gupta
 ---
 ## 🎬 Phase 1 Demo Video
