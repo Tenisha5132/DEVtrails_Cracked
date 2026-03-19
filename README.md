@@ -169,15 +169,15 @@ ShieldRun's model selection runs at **two distinct levels**. Most teams pick one
 ┌─────────────────────────────────────────────────────────────┐
 │         LEVEL 1 — Pretrained Base Model Selection           │
 │   Which foundation model do we transfer learn from?         │
-│   3 candidates evaluated → 1 winner selected               │
+│   3 candidates evaluated → 1 winner selected                │
 └───────────────────────┬─────────────────────────────────────┘
                         ↓
               Winner becomes the base of HGRS
                         ↓
 ┌─────────────────────────────────────────────────────────────┐
 │         LEVEL 2 — Final Production Model Selection          │
-│   HGRS vs 4 classical ML models — which is best overall?   │
-│   5 candidates evaluated → 1 deployed to production        │
+│   HGRS vs 4 classical ML models — which is best overall?    │
+│   5 candidates evaluated → 1 deployed to production         │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -291,14 +291,14 @@ When a disruption claim is being evaluated, the system performs a **two-point ke
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                  DUAL-KEY VERIFICATION                   │
+│                  DUAL-KEY VERIFICATION                  │
 │                                                         │
 │   Partner's Daily OTP (sent to delivery account)        │
 │              +                                          │
 │   Pickup Location's Static Key                          │
 │              ↓                                          │
 │         KEYS MATCH?                                     │
-│         ↙        ↘                                      │
+│         ↙        ↘                                     |
 │       YES          NO                                   │
 │   IN timestamp   Claim rejected                         │
 │   recorded  →    immediately                            │
