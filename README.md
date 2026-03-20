@@ -481,7 +481,7 @@ Security is not an afterthought in ShieldRun — it is foundational. We are hand
 
 ---
 
-🛡️ Adversarial Defense & Anti-Spoofing Strategy
+## Adversarial Defense & Anti-Spoofing Strategy
 
 With the rise of coordinated fraud attacks using GPS spoofing, ShieldRun implements a multi-layer adversarial defense system that goes beyond basic location verification.
 
@@ -562,7 +562,7 @@ Identical movement patterns across accounts
 
 Sudden spike in claims from a Telegram-coordinated cluster
 
-👉 ML Model Used:
+## ML Model Used:
 
 Isolation Forest detects anomalies in:
 
@@ -632,8 +632,7 @@ System becomes stricter during suspicious spikes
 Weekly Model Retraining
 
 Learns new fraud patterns continuously
-⚡ Final Defense Philosophy
-##
+##Final Defense Philosophy
 Basic Systems:
 GPS = Truth ❌
 
