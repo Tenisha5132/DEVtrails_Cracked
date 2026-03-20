@@ -770,6 +770,177 @@ shieldrun/
 └── README.md
 ```
 
+# Alternative method (optimized)
+
+## Optimized Architecture Overview
+
+This approach focuses on a lean, low-latency system with minimal components and clear decision logic.
+
+### Core Idea
+One trigger → One decision → One payout
+
+Starting with:
+Heavy Rain → Automatic Fixed Payout
+
+---
+
+## MVP Use Case
+
+### Trigger
+- Rainfall exceeds threshold in a zone  
+- Sustained for a time window  
+
+### Conditions
+- Worker is active on platform  
+- Worker has recent activity  
+
+### Output
+- Fixed payout released automatically  
+
+---
+
+## Example Rule
+
+- Rain > 15 mm/hr  
+- Sustained for 30 minutes  
+- Worker active during that time  
+
+Fixed payout credited instantly  
+
+---
+
+## Anti-GPS Spoofing Strategy
+
+GPS is not treated as a trusted source on its own.
+
+Instead, validation is based on:
+Real work + Real device + Real session
+
+### Required Checks
+
+#### 1. Device Integrity
+Reject if:
+- Rooted device  
+- Emulator  
+- Tampered app  
+
+#### 2. Live Session Validation
+- Worker must be logged in  
+- Session must be active during event  
+
+#### 3. Work Proof
+- Recent delivery / order activity  
+- Platform interaction exists  
+
+#### 4. Zone-Based Validation
+- Use zone instead of exact GPS  
+- Server matches trigger with zone  
+
+#### 5. Short-Lived Tokens
+- Temporary session tokens  
+- Prevent replay attacks  
+
+Conclusion: GPS spoofing alone cannot trigger payouts.
+
+---
+
+## Decision Flow
+
+Worker Active  
+↓  
+Device Integrity OK  
+↓  
+Session Valid  
+↓  
+Rain Trigger Detected  
+↓  
+Work Activity Verified  
+↓  
+Payout Released  
+
+Else → Reject / Hold  
+
+---
+
+## Minimal Architecture
+
+### Frontend
+- Worker dashboard  
+- Coverage + payout status  
+
+### Backend
+- Weather trigger service  
+- Eligibility engine  
+- Payout processor  
+
+### Database
+- Worker profiles  
+- Zone mapping  
+- Session logs  
+- Payout logs  
+
+---
+
+## MVP Scope (Simplified)
+
+- Single trigger system (Rain)  
+- Fixed payout model  
+- Rule-based decision engine  
+- Basic audit logging  
+
+---
+
+## Core Rule Engine
+
+IF  
+- Weather threshold crossed  
+- Worker active  
+- Device integrity valid  
+- Session valid  
+- Work activity exists  
+
+THEN  
+Approve payout  
+
+ELSE  
+Reject / Hold  
+
+---
+
+## Note on Extensibility
+
+The broader system design remains extensible.
+
+Components from the original approach can be integrated when required, including:
+- ML-based risk scoring  
+- Advanced fraud detection  
+- Multi-trigger expansion  
+- Blockchain-based audit systems  
+
+These should be added only after the core system is stable.
+
+---
+
+## Key Principle
+
+Do not rely on GPS as the primary signal.
+
+Instead, validate:
+A real worker performing real work on a real device within a valid session.
+
+---
+
+## Final Outcome
+
+- Low latency  
+- Reduced system complexity  
+- Easier implementation  
+- Clear decision logic  
+- Improved reliability  
+- Resistant to basic spoofing  
+
+This represents the optimized architecture for initial development.
+
 ---
 
 ## Team
