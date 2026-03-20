@@ -453,6 +453,11 @@ A purely GPS-based or weather-based system cannot distinguish this from a real c
 > We validate **Behavior + Proof + Pattern = Truth** — not GPS coordinates alone.
 
 ---
+## Security Architecture
+
+Security is not an afterthought in ShieldRun — it is foundational. We are handling sensitive financial data, GPS location, payout credentials, and insurance policy records for millions of gig workers. Every layer of the stack is designed with security-first principles.
+
+---
 
 ### Layer 1 — The Differentiation: Real Stranded Worker vs Faker
 
@@ -611,12 +616,6 @@ Event detected → Sensor fusion validates physical presence
 ```
 
 **GPS spoofing attacks the assumption that location = presence. ShieldRun never made that assumption.** A spoofer can fake coordinates. They cannot simultaneously fake inertial sensors, a time-limited hardware-bound OTP key match, platform delivery logs, and absence from a cross-event fraud network. Each layer is independently sufficient. Together they are insurmountable.
-
----
-
-## Security Architecture
-
-Security is not an afterthought in ShieldRun — it is foundational. We are handling sensitive financial data, GPS location, payout credentials, and insurance policy records for millions of gig workers. Every layer of the stack is designed with security-first principles.
 
 ---
 
