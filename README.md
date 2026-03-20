@@ -632,14 +632,17 @@ System becomes stricter during suspicious spikes
 Weekly Model Retraining
 
 Learns new fraud patterns continuously
+
 ##Final Defense Philosophy
+
 Basic Systems:
 GPS = Truth ❌
-
 ShieldRun:
 Behavior + Proof + Pattern = Truth ✅
 
 We shift from location-based trust → behavior-based verification, making large-scale spoofing attacks economically and technically unviable.
+
+---
 
 ### 1. Password & Credential Hashing
 
