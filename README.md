@@ -786,7 +786,7 @@ shieldrun/
 
 ## Phase 1 Demo Video
 
-> [Link to 2-minute strategy video — to be added before March 20 EOD]
+> https://amritauniv-my.sharepoint.com/:v:/g/personal/am_sc_u4aid24005_am_students_amrita_edu/IQD50pNrXGHfTZLJPDZOGeQcARvHD5QjU5pEydkXNLtyq-w?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=paDMr5
 
 The video covers our persona research, the ShieldRun concept, the weekly premium model, our parametric trigger design, and a walkthrough of our Phase 1 prototype scope.
 
