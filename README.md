@@ -1,28 +1,26 @@
-# DEVtrails_Cracked
+# 🛵 ShieldRun — AI-Powered Secure Parametric Income Insurance for Food Delivery Partners
 
-#  ShieldRun — AI-Powered Secure Parametric Income Insurance for Food Delivery Partners
-
-> **Guidewire DEVTrails 2026** | Team: [CRACKED] | Persona: Food Delivery (Zomato / Swiggy)
+> **Guidewire DEVTrails 2026** | Team: CRACKED | Persona: Food Delivery (Zomato / Swiggy)
 
 ---
 
-##  The Problem
+## 🎯 The Problem
 
 India's food delivery partners are the last mile of the digital economy — yet they are the most financially exposed. A single bad weather day in Mumbai, a civic strike in Bengaluru, or a heavy-rain evening in Chennai can wipe out an entire day's earnings with zero recourse. No safety net. No fallback. No claim to file.
 
 **This isn't hypothetical. It's already happening — repeatedly, at scale:**
 
-**The 2024 Delhi Heatwave** — Delhi recorded its highest-ever temperature in 2024, touching 52.9°C. Delivery workers had no choice but to keep riding through dangerous conditions because missing assignments meant losing earnings or facing penalties. Not a single rupee of income protection existed for hours lost to the heat.
+🌡️ **The 2024 Delhi Heatwave** — Delhi recorded its highest-ever temperature in 2024, touching 52.9°C. Delivery workers had no choice but to keep riding through dangerous conditions because missing assignments meant losing earnings or facing penalties. Not a single rupee of income protection existed for hours lost to the heat.
 
- **All-India Gig Worker Strike, Dec 31 2025** — Workers across Zomato, Swiggy, Blinkit, Zepto, Amazon and Flipkart walked off on New Year's Eve — one of the highest-demand nights of the year — over falling wages, safety risks, and zero income protection. 50–60% of deliveries were delayed across major cities. The workers who didn't strike lost a full peak-earnings day with zero recourse.
+🚫 **All-India Gig Worker Strike, Dec 31 2025** — Workers across Zomato, Swiggy, Blinkit, Zepto, Amazon and Flipkart walked off on New Year's Eve — one of the highest-demand nights of the year — over falling wages, safety risks, and zero income protection. 50–60% of deliveries were delayed across major cities. The workers who didn't strike lost a full peak-earnings day with zero recourse.
 
- **The Scale of the Gap** — India's gig workforce has grown to an estimated 12 million workers as of FY 2024–25 and is projected to reach 23.5 million by 2030. Yet the Fairwork India Report 2024 found that none of the 11 major platforms reviewed could ensure a living wage for their workers — and on-ground social security protections remain largely absent despite new regulations requiring platforms to contribute to a social security fund.
+📉 **The Scale of the Gap** — India's gig workforce has grown to an estimated 12 million workers as of FY 2024–25 and is projected to reach 23.5 million by 2030. Yet the Fairwork India Report 2024 found that none of the 11 major platforms reviewed could ensure a living wage for their workers — and on-ground social security protections remain largely absent despite new regulations requiring platforms to contribute to a social security fund.
 
-**ShieldRun fills exactly this gap** — not with policy promises, but with an intelligent system that models earning potential and compensates only the verified loss of earning opportunity in real time. No form. No wait. No argument.
+**ShieldRun fills exactly this gap** — not with policy promises, but with automated, parametric payouts triggered the moment a disruption is detected. No form. No wait. No argument.
 
 ---
 
-## Persona & Scenarios
+## 👤 Persona & Scenarios
 
 **Primary Persona:** Arjun, a Zomato delivery partner in Mumbai
 
@@ -46,9 +44,7 @@ India's food delivery partners are the last mile of the digital economy — yet 
 
 ---
 
-##  Application Workflow
-
-ShieldRun does not assume income loss from disruptions — it estimates what a worker should have earned and compensates only the verified gap.
+## 🏗️ Application Workflow
 
 ```
 [Worker Onboards on ShieldRun App]
@@ -59,20 +55,18 @@ ShieldRun does not assume income loss from disruptions — it estimates what a w
         ↓
 [Real-Time Trigger Monitoring: Weather + AQI + Traffic + Platform APIs]
         ↓
-[Disruption Detected → System Automatically Initiates Evaluation]
+[Disruption Detected → Parametric Trigger Fired Automatically]
         ↓
-[Estimate Expected Earnings (E) vs Track Actual Earnings (A)]
+[AI Fraud Engine Validates: GPS, Activity, Claim Pattern]
         ↓
-[Fraud Validation + Effort & Confidence Score Evaluated]
-        ↓
-[Instant Payout based on Verified Loss of Earning Opportunity — Zero Manual Claim Needed]
+[Instant Payout to UPI / Wallet — Zero Manual Claim Needed]
         ↓
 [Dashboard Updated: Worker Sees Earnings Protected]
 ```
 
 ---
 
-##  Weekly Premium Model
+## 💰 Weekly Premium Model
 
 Our financial model is structured **100% on a weekly basis** to match the gig worker's earnings cycle.
 
@@ -105,27 +99,25 @@ Weekly Premium = Base Rate × Zone Multiplier × Season Factor × (1 - Loyalty D
 
 ---
 
-## Parametric Triggers (Automated — Zero Touch)
+## ⚡ Parametric Triggers (Automated — Zero Touch)
 
-A purely parametric system assumes every event equals a loss — ShieldRun uses a **Hybrid Parametric + Outcome-Based System**. Parametric triggers initiate the evaluation process based on **objective data conditions**, rather than immediately dispatching a fixed payout.
+Parametric insurance pays out based on **objective data conditions**, not manual claims. ShieldRun monitors 5 real-time data streams:
 
-| Trigger | API Source | Threshold | Action |
+| Trigger | API Source | Threshold | Payout |
 |---|---|---|---|
-| Heavy Rain | OpenWeatherMap / IMD API | > 15mm/hr in partner's pincode | Triggers Evaluation |
-| Extreme Heat | OpenWeatherMap | Temp > 42°C for 3+ hrs | Triggers Evaluation |
-| Hazardous AQI | CPCB AQI API (mock) | AQI > 300 | Triggers Evaluation |
-| Civic Strike/Bandh | Government alert feed (mock) | Verified zone lockdown | Triggers Evaluation |
-| Platform Outage | Zomato/Swiggy status mock API | Downtime > 2 hrs | Triggers Evaluation |
+| Heavy Rain | OpenWeatherMap / IMD API | > 15mm/hr in partner's pincode | Daily earnings × 80% |
+| Extreme Heat | OpenWeatherMap | Temp > 42°C for 3+ hrs | Daily earnings × 50% |
+| Hazardous AQI | CPCB AQI API (mock) | AQI > 300 | Daily earnings × 60% |
+| Civic Strike/Bandh | Government alert feed (mock) | Verified zone lockdown | Daily earnings × 100% |
+| Platform Outage | Zomato/Swiggy status mock API | Downtime > 2 hrs | Daily earnings × 90% |
 
-> **Note:** **“Triggers initiate evaluation, not payout — ensuring that only real income loss leads to compensation, not assumptions.”** We model earning potential, not just events. Payout is based on verified loss of earning opportunity.
-
-**Claim Initiation:** Fully automatic. Partner receives a push notification: *"Heavy rain detected in your zone. Evaluating income impact for potential payout."*
+**Claim Initiation:** Fully automatic. Partner receives a push notification: *"Heavy rain detected in your zone. Your claim is being processed."*
 
 **No form filling. No document upload. No waiting.**
 
 ---
 
-##  AI/ML Integration Plan
+## 🤖 AI/ML Integration Plan
 
 ### 1. Dynamic Premium Calculation
 - **Model:** Gradient Boosted Regression (XGBoost)
@@ -137,31 +129,9 @@ A purely parametric system assumes every event equals a loss — ShieldRun uses 
 - **Inputs:** Delivery zone, avg daily hours, platform (Zomato/Swiggy), historical city disruption data
 - **Output:** Risk Score (Low / Medium / High) used to assign base plan
 
-### 3. Hybrid Earning Prediction Engine
+### 3. 🧠 Hyperlocal Gig Risk Scorer (HGRS) — Our Custom Algorithm
 
-Disruptions do not uniformly reduce income — they reshape earning distributions. Our system adapts to variability across time, zone, and behavior. We evaluate the true loss of earning opportunity through a combination of a Personal Model and a Global Model:
-
-**Payout = max(0, Expected Earnings − Actual Earnings) × Effort × Confidence**
-*If Actual Earnings ≥ Expected Earnings → No payout is triggered.*
-
-This effectively models a counterfactual scenario — what the worker would have earned if the disruption had not occurred.
-
-- **Expected Earnings (E)**: Modeled actively before payout. **Expected Earnings represents the estimated income under normal working conditions, adjusted for real-time event impact to avoid overestimating loss.**
-  `E = BaseRate × Hours × Demand × EventImpact × ZoneFactor`
-  - **Personal Model**: Learns user behavior, earnings pattern, and working hours.
-  - **Global Model**: Learns event impact, zone demand, and time-based variations. **This approach allows ShieldRun to handle real-world variability across time, location, platform demand, and worker behavior — making payouts adaptive rather than assumption-driven.**
-  - **BaseRate**: user's earning per hour.
-  - **Hours**: expected working duration.
-  - **Demand**: probability of orders.
-  - **EventImpact**: how disruption affects earnings (*Note: EventImpact is NOT always negative. Some events can increase earnings*).
-  - **ZoneFactor**: area productivity.
-- **Actual Earnings (A)**: Derived from verified activity (based on deliveries, timestamps, GPS).
-- **Effort Score (S)**: Range [0,1]. Based on login duration, acceptance rate, and movement consistency to prevent low-effort exploitation.
-- **Confidence Score (C)**: Range [0,1]. Based on trigger reliability, fraud detection, and location certainty.
-
-### 4. Hyperlocal Gig Risk Scorer (HGRS) — Our Supporting Global Intelligence Model
-
-This is ShieldRun's supporting global intelligence model — a novel risk scoring algorithm built on top of pretrained foundation models using **transfer learning**, purpose-designed for India's gig economy.
+This is ShieldRun's core ML innovation — a novel risk scoring algorithm built on top of pretrained foundation models using **transfer learning**, purpose-designed for India's gig economy.
 
 ShieldRun's model selection runs at **two distinct levels**. Most teams pick one model and ship it. We run a structured comparison at every layer and always deploy the proven best.
 
@@ -169,21 +139,21 @@ ShieldRun's model selection runs at **two distinct levels**. Most teams pick one
 ┌─────────────────────────────────────────────────────────────┐
 │         LEVEL 1 — Pretrained Base Model Selection           │
 │   Which foundation model do we transfer learn from?         │
-│   3 candidates evaluated → 1 winner selected                │
+│   3 candidates evaluated → 1 winner selected               │
 └───────────────────────┬─────────────────────────────────────┘
                         ↓
               Winner becomes the base of HGRS
                         ↓
 ┌─────────────────────────────────────────────────────────────┐
 │         LEVEL 2 — Final Production Model Selection          │
-│   HGRS vs 4 classical ML models — which is best overall?    │
-│   5 candidates evaluated → 1 deployed to production         │
+│   HGRS vs 4 classical ML models — which is best overall?   │
+│   5 candidates evaluated → 1 deployed to production        │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-#### Level 1 — Pretrained Base Model Comparison (3 Candidates)
+#### 📊 Level 1 — Pretrained Base Model Comparison (3 Candidates)
 
 Training a risk model from scratch requires years of labelled insurance claim data that doesn't exist yet for India's gig sector. Instead, we start with a **pretrained weather/climate foundation model** and extract its internal embeddings as rich input features — rather than raw weather numbers — giving our model a massive head start.
 
@@ -229,12 +199,12 @@ Partner Behavioral Profile (working hours, zone, platform)
 
 Most insurance risk models score at a city level. HGRS scores at **pincode + time-of-day + platform + season** level:
 
-| Zone                   | Time  | Month    | Platform    | Risk Score    |
-|------------------------|-------|----------|-------------|---------------|
-| Dharavi, Mumbai        | 6 PM  | July     | Zomato      | 87 — Extreme  |
-| Bandra, Mumbai         | 10 AM | December | Swiggy      | 12 — Low      |
-| Connaught Place, Delhi | 2 PM  | May      | Amazon Flex | 74 — High     | 
-| Koramangala, Bengaluru | 8 PM  | March    | Swiggy      | 31 — Moderate |
+| Zone | Time | Month | Platform | Risk Score |
+|---|---|---|---|---|
+| Dharavi, Mumbai | 6 PM | July | Zomato | 87 — Extreme |
+| Bandra, Mumbai | 10 AM | December | Swiggy | 12 — Low |
+| Connaught Place, Delhi | 2 PM | May | Amazon Flex | 74 — High |
+| Koramangala, Bengaluru | 8 PM | March | Swiggy | 31 — Moderate |
 
 #### Self-Improving Feedback Loop
 
@@ -250,7 +220,7 @@ Claim Verified & Paid → Confirmed Disruption Event
 
 ---
 
-### 5. Level 2 — Final Production Model Comparison (5 Candidates)
+### 4. 📊 Level 2 — Final Production Model Comparison (5 Candidates)
 
 Once HGRS is built, it competes against 4 classical ML baselines on the **same India gig dataset**. We do not assume HGRS wins — we prove it.
 
@@ -279,11 +249,11 @@ The model with the best combined score across **RMSE + AUC-ROC + SHAP** is deplo
 
 > **Why this matters for regulators:** IRDAI increasingly requires AI-driven pricing to be auditable. By running SHAP explainability alongside accuracy metrics at both levels, ShieldRun is built for regulatory compliance from day one — not retrofitted later.
 
-### 6. Fraud Detection Engine — Dual-Key Location Verification System
+### 3. Fraud Detection Engine — Dual-Key Location Verification System
 
 This is ShieldRun's original fraud prevention mechanism, purpose-built for food delivery workflows.
 
-#### The Core Idea
+#### 🔑 The Core Idea
 
 Every pickup location (restaurant / dark kitchen / cloud hub) has a **static Location Key** permanently registered in ShieldRun's system. Every day, the delivery partner receives a **time-bound Daily OTP** pushed directly to their **Zomato / Swiggy / Amazon delivery account** — the same app they already use to accept orders.
 
@@ -291,14 +261,14 @@ When a disruption claim is being evaluated, the system performs a **two-point ke
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                  DUAL-KEY VERIFICATION                  │
+│                  DUAL-KEY VERIFICATION                   │
 │                                                         │
 │   Partner's Daily OTP (sent to delivery account)        │
 │              +                                          │
 │   Pickup Location's Static Key                          │
 │              ↓                                          │
 │         KEYS MATCH?                                     │
-│         ↙        ↘                                     |
+│         ↙        ↘                                      │
 │       YES          NO                                   │
 │   IN timestamp   Claim rejected                         │
 │   recorded  →    immediately                            │
@@ -314,7 +284,7 @@ When a disruption claim is being evaluated, the system performs a **two-point ke
 └─────────────────────────────────────────────────────────┘
 ```
 
-#### How It Works Step by Step
+#### 📍 How It Works Step by Step
 
 | Step | Event | What ShieldRun Records |
 |---|---|---|
@@ -324,7 +294,7 @@ When a disruption claim is being evaluated, the system performs a **two-point ke
 | **4. Drop-off (OUT)** | Delivery marked complete in platform app | OUT timestamp recorded, delivery window closed |
 | **5. Claim Check** | Disruption event timestamp cross-checked against IN→OUT window | If disruption falls within verified window → claim is legitimate |
 
-#### Fraud Scenarios This Catches
+#### 🚨 Fraud Scenarios This Catches
 
 | Fraud Attempt | How Dual-Key Stops It |
 |---|---|
@@ -334,47 +304,29 @@ When a disruption claim is being evaluated, the system performs a **two-point ke
 | Two partners sharing the same OTP | OTP is single-use, tied to one account → second use flagged immediately |
 | GPS spoofing (fake location) | Location key at pickup is static and hardware-bound — spoofed GPS won't produce a valid key match |
 
-#### AI Layer on Top — Isolation Forest Anomaly Detection
+#### 🤖 AI Layer on Top — Isolation Forest Anomaly Detection
 
 Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass on every claim:
 
 - **Velocity check:** More than 3 claims in 4 weeks → manual review flag
 - **Pattern check:** Claims suspiciously clustered on Monday mornings or just before policy renewal → flagged
 - **Cross-partner check:** Multiple partners claiming the same disruption event from the same pickup location in an unusually short window → collusion flag
-- **Effort Score Validation:** Ensures movement consistency and high acceptance rate. Drops in effort score immediately discount the payout multiplier to catch low-effort exploitation.
-- **Confidence Score Integration:** Evaluates trigger reliability and location certainty, acting as a direct probability modifier.
 - **Output:** Fraud Risk Score (0–100). Score > 70 → auto-reject + flag for insurer review
 
-**This ensures that payouts are not only validated for authenticity, but also adjusted based on the worker’s actual effort during the disruption window.**
-
-#### Key Security Properties
+#### 🔐 Key Security Properties
 
 - Daily OTPs are generated using **HMAC-SHA256** — cryptographically signed, cannot be guessed or forged
 - Location static keys are **stored encrypted (AES-256)** in the backend — never exposed client-side
 - All IN/OUT timestamp events are **written to the blockchain ledger** — immutable, auditable, tamper-proof
 - Raw GPS trail is **hashed to zone-level** and auto-deleted after 24 hours — privacy by design
 
-### 7. Predictive Disruption Forecasting (Phase 3)
+### 4. Predictive Disruption Forecasting (Phase 3)
 - **Model:** LSTM time-series model trained on 3 years of IMD weather data
 - **Purpose:** Predict high-risk weeks in advance, enable proactive partner alerts
 
 ---
 
-### ⚙️ From Event-Based to Outcome-Based Protection
-
-```text
-Traditional parametric systems:
-Disruption → Fixed Payout
-
-ShieldRun:
-Disruption → Impact on Earnings → Verified Loss → Payout
-```
-
-**By shifting from event-based payouts to outcome-based evaluation, ShieldRun transforms parametric insurance into an adaptive, intelligence-driven income protection system.**
-
----
-
-## Platform Choice: Mobile-First Web App (PWA)
+## 🖥️ Platform Choice: Mobile-First Web App (PWA)
 
 **Rationale:**
 - Food delivery partners primarily use smartphones (Android, budget tier)
@@ -445,11 +397,9 @@ Disruption → Impact on Earnings → Verified Loss → Payout
 
 ---
 
-## Key Metrics (Analytics Dashboard — Planned)
+## 📊 Key Metrics (Analytics Dashboard — Planned)
 
 **For Workers:**
-- Expected vs Actual earnings breakdown
-- Effort score display and trust visibility
 - Total earnings protected this week
 - Active coverage status + renewal date
 - Payout history timeline
@@ -464,187 +414,213 @@ Disruption → Impact on Earnings → Verified Loss → Payout
 
 ---
 
-## We Do NOT Cover
+## 🔐 What We Explicitly Do NOT Cover
 
-As per hackathon constraints, ShieldRun strictly excludes:
--  Health or medical insurance
--  Life insurance
--  Accident coverage
--  Vehicle repair or maintenance payouts
--  Any manual/subjective claim — all triggers are parametric and data-driven
+Per hackathon constraints, ShieldRun strictly excludes:
+- ❌ Health or medical insurance
+- ❌ Life insurance
+- ❌ Accident coverage
+- ❌ Vehicle repair or maintenance payouts
+- ❌ Any manual/subjective claim — all triggers are parametric and data-driven
 
 ---
 
-## Security Architecture
+## 🚨 Adversarial Defense & Anti-Spoofing Strategy
+
+> **Market Crash Response — Phase 1** | A coordinated syndicate of 500 delivery workers organized via Telegram is using GPS spoofing apps to fake locations inside red-alert weather zones, triggering mass false payouts and draining liquidity pools. Simple GPS verification is obsolete. Here is how ShieldRun fights back.
+
+---
+
+### The Attack We Are Defending Against
+
+```
+Syndicate member sits at home (safe zone)
+              ↓
+Installs GPS spoofing app → fakes location inside flood zone
+              ↓
+Parametric trigger fires (rain > 15mm/hr detected in zone)
+              ↓
+Platform assumes worker is stranded → pays out
+              ↓
+500 members × ₹800 payout = ₹4,00,000 drained in one event
+```
+
+A purely GPS-based or weather-based system cannot distinguish this from a real claim. ShieldRun's defense operates across **four layers** — each independently capable of catching fraud, together making it nearly impossible to defeat.
+
+> **Core Philosophy shift:**
+> Basic systems ask: *"Where is the person?"*
+> ShieldRun asks: *"Did the person actually work?"*
+> We validate **Behavior + Proof + Pattern = Truth** — not GPS coordinates alone.
+
+---
+
+### Layer 1 — The Differentiation: Real Stranded Worker vs Faker
+
+A real stranded worker behaves differently from someone faking it at home. Their device signals, movement patterns, and platform activity tell a story no spoofed GPS can replicate.
+
+| Signal | Genuine Stranded Worker | GPS Spoofer at Home |
+|---|---|---|
+| **Sensor Fusion** | Accelerometer shows vibrations, barometer drops with weather, gyroscope active | Accelerometer near-zero, barometer static, magnetometer frozen — classic spoofing app signature |
+| **Battery drain** | Higher drain — GPS active, network switching in bad weather | Normal idle drain |
+| **Network signal** | Degraded — cell towers in flood zones overloaded | Full bars on home WiFi |
+| **Platform activity** | Attempted order logins, declined orders due to disruption | No platform activity during claim window |
+| **Dual-Key OTP match** | OTP matched against physical pickup location key — IN timestamp verified | Cannot produce valid IN timestamp — never at a pickup location |
+| **Delivery quality signals** | Past completion rate, time-per-delivery, pickup location diversity consistent | Effort score inflated by fake logins but zero real deliveries |
+| **Historical zone presence** | Regular GPS presence in this zone on prior working days | No prior zone history |
+
+#### 🔐 Hardened Dual-Key System — Addressing Reverse Engineering Risk
+
+The original dual-key concept is strong but we go further. Keys are **not static** — they are:
+- **Server-generated and time-limited** — new key every 60 seconds
+- **Tied to device ID + session token + timestamp** — the same key cannot be reused on another device or at another time
+- **Never stored client-side** — key lives only in server memory during the verification window
+- Backed by **HMAC-SHA256 signing** — cryptographically impossible to forge without server secret
+
+A reverse-engineered app gets a key that expired 60 seconds ago. Useless.
+
+#### 🔬 Sensor Fusion — Addressing GPS Replay Attacks
+
+Modern spoofers can simulate realistic routes with speed variation and even replay real GPS traces. Our defense goes below the GPS layer:
+
+- **Accelerometer + gyroscope + barometer** cross-validated against GPS coordinates
+- A spoofing app can fake coordinates — it cannot simultaneously fake physical inertial sensor data
+- Worker on a bike in rain: barometer registers pressure change, accelerometer shows road vibrations, gyroscope shows turns. A person sitting at home shows none of these.
+- **Any mismatch between GPS claims and sensor reality → automatic Tier 3 flag**
+
+---
+
+### Layer 2 — The Data: What Catches a Coordinated Fraud Ring
+
+Individual fraud is hard. A ring of 500 people leaves unmistakable patterns. ShieldRun monitors **six cross-partner signals**:
+
+#### Signal 1 — Claim Velocity Spike
+```
+Genuine disruption:   ▁▂▃▄▅▆▆▅▄▃▂  (gradual bell curve over 30–60 min)
+Fraud ring attack:    ▁▁▁▁▇▇▇▇▁▁▁  (sudden vertical spike in < 5 min)
+```
+Claims-per-minute rate anomaly triggers a ring investigation flag automatically.
+
+#### Signal 2 — Temporal Clustering Analysis
+Ring members file claims within minutes of each other. If N claims from unrelated accounts arrive in a tight window from overlapping zones — coordinated event flag raised.
+
+#### Signal 3 — Device Fingerprint Clustering
+GPS spoofing apps leave identifiable signatures — accelerometer reads zero, magnetometer frozen, barometer static. Multiple claims sharing the same sensor anomaly fingerprint = same spoofing tool = coordinated group.
+
+#### Signal 4 — Social Graph & Account Creation Analysis
+If 50 accounts were created in the same 48-hour window, share the same referral code, or were onboarded from the same device IP subnet — suspicious cluster flagged. A fraud ring recruits together; our system sees that.
+
+#### Signal 5 — Zone Saturation Anomaly
+Real disruptions never produce 100% claim participation — some workers complete deliveries, some weren't working. If claim rate exceeds **3 standard deviations above historical average** for a zone, the entire batch is held for review.
+
+#### Signal 6 — Cross-Event Repeat Offender Network
+```
+Event 1 (Mumbai flood):   Partners A, B, C, D, E all claim
+Event 2 (Delhi heat):     Partners A, B, C, F, G all claim
+Event 3 (Bengaluru AQI):  Partners A, C, D, F, H all claim
+                                    ↓
+         Partner A, C appear in ALL 3 events → Persistent fraud network flagged
+```
+
+---
+
+### Layer 3 — Device-Level Security (The Gap Most Systems Miss)
+
+Most fraud starts **at the device level** before GPS is even spoofed. ShieldRun implements:
+
+- **Rooted / jailbroken device detection** — rooted Android devices can run GPS mock apps at system level; detected on app launch and flagged
+- **Emulator detection** — claims from Android emulators (common in coordinated attacks) are automatically rejected
+- **Cloned app fingerprinting** — if the same app instance ID appears on two different devices, both accounts are flagged
+- **App integrity check** — ShieldRun verifies its own APK signature at runtime; a tampered or repackaged app is detected immediately
+
+---
+
+### Layer 4 — Hybrid ML Model (Beyond Isolation Forest)
+
+Isolation Forest alone is unsupervised — it detects statistical anomalies but does not understand intent and can miss sophisticated coordinated fraud. ShieldRun uses a **three-component hybrid model**:
+
+```
+Component 1: Isolation Forest
+→ Detects statistical outliers in claim frequency and behavioral deviation
+              +
+Component 2: Rule-Based Engine
+→ Hard thresholds: velocity spike > X, zone saturation > 3σ, sensor mismatch
+              +
+Component 3: Supervised Classifier (XGBoost)
+→ Trained on confirmed past fraud labels — understands intent, not just anomaly
+              ↓
+Combined Fraud Risk Score (0–100)
+```
+
+**Weekly retraining** on new confirmed fraud labels ensures the model evolves as attackers adapt.
+
+---
+
+### Layer 5 — The UX Balance: Flagging Without Punishing Honest Workers
+
+A system that punishes honest workers to catch fraudsters loses user trust faster than any fraud ring drains money. ShieldRun uses a **three-tier response** — never binary approve/reject:
+
+#### Tier 1 — Auto-Approved (Confidence ≥ 0.85)
+All signals align. OTP matched. Sensors consistent. Platform active. No ring signals. **Instant payout.** Worker never knows a check happened.
+
+#### Tier 2 — Soft Flag (Confidence 0.50–0.84)
+Slightly ambiguous but not conclusive — could be genuine network drop in bad weather:
+- **60% payout released immediately** — worker not left without income
+- **Silent 6-hour background check** — platform logs, cell tower data, zone history
+- Pass → remaining 40% auto-released, no action needed
+- Fail → 60% logged as recoverable advance, future premium adjusted slightly
+- **Worker never fills a form or calls anyone**
+
+#### Tier 3 — Hard Flag (Confidence < 0.50 OR Ring Signal)
+Strong fraud signals. Payout held. Notification sent:
+> *"We detected unusual signals with your claim. Our team is reviewing it within 4 hours. If this is an error, your payout will be released automatically — no action needed from you."*
+
+- No accusatory language — never says "fraud suspected"
+- **4-hour SLA** — not days
+- **One-tap appeal** — one piece of corroborating evidence expedites review
+- Cleared → full payout + Confidence Score trust bonus
+
+#### Audit Scalability — Reviewer Gap Addressed
+Manual audit at scale breaks for 10,000+ users. ShieldRun solves this:
+- Only the **top 1% highest fraud-score cases** reach human reviewers
+- Everything below auto-resolves via confidence score decay over 24 hours
+- Audits are **prioritized by ring membership score** — syndicate members reviewed first
+
+```
+Tier 1 (85%+ of genuine claims):  Instant payout — zero friction
+Tier 2 (mild ambiguity):          60% instant + silent 6hr background check
+Tier 3 (strong fraud signals):    Hold + human review within 4 hours
+                                  Only top 1% reach human auditors
+```
+
+---
+
+### Defense Philosophy Summary
+
+```
+Basic parametric systems:
+Event detected → GPS in zone → Payout ❌
+
+ShieldRun:
+Event detected → Sensor fusion validates physical presence
+              → Dual-key proves pickup location attendance
+              → Behavior proves actual work effort
+              → Cross-partner signals rule out ring coordination
+              → Hybrid ML scores intent, not just anomaly
+              → Tier system protects honest workers
+              → Verified loss → Payout ✅
+```
+
+**GPS spoofing attacks the assumption that location = presence. ShieldRun never made that assumption.** A spoofer can fake coordinates. They cannot simultaneously fake inertial sensors, a time-limited hardware-bound OTP key match, platform delivery logs, and absence from a cross-event fraud network. Each layer is independently sufficient. Together they are insurmountable.
+
+---
+
+## 🔒 Security Architecture
 
 Security is not an afterthought in ShieldRun — it is foundational. We are handling sensitive financial data, GPS location, payout credentials, and insurance policy records for millions of gig workers. Every layer of the stack is designed with security-first principles.
 
 ---
 
-## Adversarial Defense & Anti-Spoofing Strategy
-
-With the rise of coordinated fraud attacks using GPS spoofing, ShieldRun implements a multi-layer adversarial defense system that goes beyond basic location verification.
-
-1. The Differentiation — Real vs Spoofed Worker
-
-ShieldRun does not trust GPS alone. Instead, it validates behavior + system interaction + delivery proof:
-
-Dual-Key Verification System (Primary Defense)
-
-Real worker → Must pass OTP + Pickup Location Key match
-
-Spoofer → Cannot generate valid location key → instantly rejected
-
-Movement Consistency Check
-
-Real worker → Natural movement pattern (speed, stops, route variation)
-
-Spoofer → Static / unrealistic jumps → flagged by ML model
-
-Effort Score Validation
-
-Real worker → High login time + order acceptance
-
-Spoofer → Low effort but high claims → penalized or rejected
-
-Delivery Window Proof (IN → OUT timestamps)
-
-Real claim → Verified delivery timeline exists
-
-Fake claim → No real delivery → auto-reject
-
-# Key Idea:
-We validate “Did the person actually work?”, not just “Where is the person?”
-
-2. The Data — Beyond GPS Coordinates
-
-To detect coordinated fraud rings, ShieldRun analyzes multi-dimensional data signals:
-
-📍 Behavioral Data
-
-Login duration
-
-Order acceptance rate
-
-Delivery completion timestamps
-
-Idle vs active time ratio
-
-📍 Movement Data
-
-Speed patterns (constant vs natural variation)
-
-Route continuity (no teleporting)
-
-Zone transitions
-
-📍 Platform Data
-
-Verified orders from Zomato/Swiggy APIs
-
-Pickup and drop timestamps
-
-Platform outage correlation
-
-📍 Environmental Data
-
-Weather API (rain, heat)
-
-AQI levels
-
-Government alerts
-
-📍 Cross-User Fraud Signals (CRITICAL)
-
-Multiple users claiming from same zone at same time
-
-Identical movement patterns across accounts
-
-Sudden spike in claims from a Telegram-coordinated cluster
-
-## ML Model Used:
-
-Isolation Forest detects anomalies in:
-
-Claim frequency
-
-Behavioral deviation
-
-Group fraud patterns
-
-3. The UX Balance — Protecting Honest Workers
-
-We do NOT blindly reject flagged claims — this is where most systems fail.
-
-✅ Smart Handling of Flagged Cases:
-
-Soft Flag (Low Risk)
-
-Claim processed with reduced confidence score
-
-Partial payout allowed
-
-Medium Risk
-
-Delayed payout (few hours)
-
-Additional verification using activity + platform data
-
-High Risk
-
-Claim temporarily blocked
-
-Sent for manual audit (admin dashboard)
-
-🌧️ Handling Real-World Edge Cases
-
-Example:
-Worker in heavy rain → poor network → GPS drops
-
-Our system:
-
-Uses last known valid movement
-
-Checks platform order activity
-
-Uses zone-level validation instead of exact GPS
-
-👉 Result:
-✔ Honest workers still get paid
-❌ Fraudsters get filtered out
-
-4. System-Level Protection Against Coordinated Attacks
-
-To stop Telegram-based fraud syndicates:
-
-Cluster Detection
-
-Detects abnormal spikes from same zone
-
-Rate Limiting on Claims
-
-Prevents mass payout draining
-
-Dynamic Risk Thresholds
-
-System becomes stricter during suspicious spikes
-
-Weekly Model Retraining
-
-Learns new fraud patterns continuously
-
-##Final Defense Philosophy
-
-Basic Systems:
-GPS = Truth ❌
-ShieldRun:
-Behavior + Proof + Pattern = Truth ✅
-
-We shift from location-based trust → behavior-based verification, making large-scale spoofing attacks economically and technically unviable.
-
----
-
-### 1. Password & Credential Hashing
+### 1. 🔑 Password & Credential Hashing
 
 All user credentials are **never stored in plaintext** — ever.
 
@@ -665,7 +641,7 @@ const isValid = await bcrypt.compare(inputPassword, hashedPassword);
 
 ---
 
-### 2. Blockchain — Immutable Claim & Policy Ledger
+### 2. 🪙 Blockchain — Immutable Claim & Policy Ledger
 
 Every policy issuance, parametric trigger event, and payout is recorded on a **private blockchain ledger**. This prevents tampering, ensures auditability, and makes fraud significantly harder.
 
@@ -705,7 +681,7 @@ function createBlock(eventData, previousHash) {
 
 ---
 
-### 3. Data Encryption — At Rest & In Transit
+### 3. 🔐 Data Encryption — At Rest & In Transit
 
 **In Transit (HTTPS / TLS 1.3):**
 - All API communication enforces **TLS 1.3** — older protocols (TLS 1.0, 1.1, SSL) are explicitly rejected
@@ -734,7 +710,7 @@ decrypted_upi = cipher.decrypt(encrypted_upi.encode()).decode()
 
 ---
 
-### 4. Application Security
+### 4. 🛡️ Application Security
 
 **Authentication & Authorization:**
 - **JWT (JSON Web Tokens)** with short expiry (15 min access token + 7-day refresh token)
@@ -755,7 +731,7 @@ decrypted_upi = cipher.decrypt(encrypted_upi.encode()).decode()
 
 ---
 
-### 5. GPS & Location Data Privacy
+### 5. 📍 GPS & Location Data Privacy
 
 Partner GPS data is used only for fraud validation — not stored long-term.
 
@@ -765,22 +741,22 @@ Partner GPS data is used only for fraud validation — not stored long-term.
 
 ---
 
-### 6. Security Summary Table
+### 6. 🔍 Security Summary Table
 
-| Layer                | Technology                    | Protection                                 |
-|----------------------|-------------------------------|--------------------------------------------|
-| Passwords            | bcrypt (cost=12)              | Brute-force resistant credential storage   |
-| Sensitive DB fields  | AES-256-CBC + AWS KMS         | Encrypted at rest, key rotation supported  |
-| API transport        | TLS 1.3 + HSTS                | Encrypted in transit, no downgrade attacks |
-| Auth tokens          | JWT + httpOnly cookies        | XSS-resistant session management           |
-| Claim/policy records | Hyperledger Fabric blockchain | Tamper-proof, auditable event ledger       |
-| API abuse            | Rate limiting + WAF           | DDoS and injection attack prevention       |
-| GPS data             | Zone-hashing + 24hr TTL       | Location privacy by design                 |
-| Secrets              | AWS Secrets Manager / KMS     | No hardcoded credentials anywhere          |
+| Layer | Technology | Protection |
+|---|---|---|
+| Passwords | bcrypt (cost=12) | Brute-force resistant credential storage |
+| Sensitive DB fields | AES-256-CBC + AWS KMS | Encrypted at rest, key rotation supported |
+| API transport | TLS 1.3 + HSTS | Encrypted in transit, no downgrade attacks |
+| Auth tokens | JWT + httpOnly cookies | XSS-resistant session management |
+| Claim/policy records | Hyperledger Fabric blockchain | Tamper-proof, auditable event ledger |
+| API abuse | Rate limiting + WAF | DDoS and injection attack prevention |
+| GPS data | Zone-hashing + 24hr TTL | Location privacy by design |
+| Secrets | AWS Secrets Manager / KMS | No hardcoded credentials anywhere |
 
 ---
 
-## Repository Structure (Planned)
+## 🗂️ Repository Structure (Planned)
 
 ```
 shieldrun/
@@ -797,16 +773,18 @@ shieldrun/
 
 ---
 
-## Team
+## 👥 Team
 
-| Name |
+| Name | Role |
+|---|---|
+| B. Tenisha Akhila |
+| Suggu Jhansi Lakshmi |
+| Saavan Rajeev |
+| Kalidasaan B | 
+| Nachiketh Gupta |
+
 ---
-- BALLA TENISHAAKHILA
-- Kalidasan B
-- Suggu Jhansi Lakshmi
-- Saavan Rajeev
-- B Nachiketh Gupta
----
+
 ## 🎬 Phase 1 Demo Video
 
 > 📹 [Link to 2-minute strategy video — to be added before March 20 EOD]
@@ -814,3 +792,5 @@ shieldrun/
 The video covers our persona research, the ShieldRun concept, the weekly premium model, our parametric trigger design, and a walkthrough of our Phase 1 prototype scope.
 
 ---
+
+*Built for Guidewire DEVTrails 2026 — Seed. Scale. Soar.*
