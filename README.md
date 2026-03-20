@@ -1,26 +1,26 @@
-# 🛵 ShieldRun — AI-Powered Secure Parametric Income Insurance for Food Delivery Partners
+# ShieldRun — AI-Powered Secure Parametric Income Insurance for Food Delivery Partners
 
 > **Guidewire DEVTrails 2026** | Team: CRACKED | Persona: Food Delivery (Zomato / Swiggy)
 
 ---
 
-## 🎯 The Problem
+## The Problem
 
 India's food delivery partners are the last mile of the digital economy — yet they are the most financially exposed. A single bad weather day in Mumbai, a civic strike in Bengaluru, or a heavy-rain evening in Chennai can wipe out an entire day's earnings with zero recourse. No safety net. No fallback. No claim to file.
 
 **This isn't hypothetical. It's already happening — repeatedly, at scale:**
 
-🌡️ **The 2024 Delhi Heatwave** — Delhi recorded its highest-ever temperature in 2024, touching 52.9°C. Delivery workers had no choice but to keep riding through dangerous conditions because missing assignments meant losing earnings or facing penalties. Not a single rupee of income protection existed for hours lost to the heat.
+ **The 2024 Delhi Heatwave** — Delhi recorded its highest-ever temperature in 2024, touching 52.9°C. Delivery workers had no choice but to keep riding through dangerous conditions because missing assignments meant losing earnings or facing penalties. Not a single rupee of income protection existed for hours lost to the heat.
 
-🚫 **All-India Gig Worker Strike, Dec 31 2025** — Workers across Zomato, Swiggy, Blinkit, Zepto, Amazon and Flipkart walked off on New Year's Eve — one of the highest-demand nights of the year — over falling wages, safety risks, and zero income protection. 50–60% of deliveries were delayed across major cities. The workers who didn't strike lost a full peak-earnings day with zero recourse.
+ **All-India Gig Worker Strike, Dec 31 2025** — Workers across Zomato, Swiggy, Blinkit, Zepto, Amazon and Flipkart walked off on New Year's Eve — one of the highest-demand nights of the year — over falling wages, safety risks, and zero income protection. 50–60% of deliveries were delayed across major cities. The workers who didn't strike lost a full peak-earnings day with zero recourse.
 
-📉 **The Scale of the Gap** — India's gig workforce has grown to an estimated 12 million workers as of FY 2024–25 and is projected to reach 23.5 million by 2030. Yet the Fairwork India Report 2024 found that none of the 11 major platforms reviewed could ensure a living wage for their workers — and on-ground social security protections remain largely absent despite new regulations requiring platforms to contribute to a social security fund.
+ **The Scale of the Gap** — India's gig workforce has grown to an estimated 12 million workers as of FY 2024–25 and is projected to reach 23.5 million by 2030. Yet the Fairwork India Report 2024 found that none of the 11 major platforms reviewed could ensure a living wage for their workers — and on-ground social security protections remain largely absent despite new regulations requiring platforms to contribute to a social security fund.
 
 **ShieldRun fills exactly this gap** — not with policy promises, but with automated, parametric payouts triggered the moment a disruption is detected. No form. No wait. No argument.
 
 ---
 
-## 👤 Persona & Scenarios
+## Persona & Scenarios
 
 **Primary Persona:** Arjun, a Zomato delivery partner in Mumbai
 
@@ -44,7 +44,7 @@ India's food delivery partners are the last mile of the digital economy — yet 
 
 ---
 
-## 🏗️ Application Workflow
+## Application Workflow
 
 ```
 [Worker Onboards on ShieldRun App]
@@ -66,7 +66,7 @@ India's food delivery partners are the last mile of the digital economy — yet 
 
 ---
 
-## 💰 Weekly Premium Model
+## Weekly Premium Model
 
 Our financial model is structured **100% on a weekly basis** to match the gig worker's earnings cycle.
 
@@ -99,7 +99,7 @@ Weekly Premium = Base Rate × Zone Multiplier × Season Factor × (1 - Loyalty D
 
 ---
 
-## ⚡ Parametric Triggers (Automated — Zero Touch)
+## Parametric Triggers (Automated — Zero Touch)
 
 Parametric insurance pays out based on **objective data conditions**, not manual claims. ShieldRun monitors 5 real-time data streams:
 
@@ -117,7 +117,7 @@ Parametric insurance pays out based on **objective data conditions**, not manual
 
 ---
 
-## 🤖 AI/ML Integration Plan
+## AI/ML Integration Plan
 
 ### 1. Dynamic Premium Calculation
 - **Model:** Gradient Boosted Regression (XGBoost)
@@ -129,7 +129,7 @@ Parametric insurance pays out based on **objective data conditions**, not manual
 - **Inputs:** Delivery zone, avg daily hours, platform (Zomato/Swiggy), historical city disruption data
 - **Output:** Risk Score (Low / Medium / High) used to assign base plan
 
-### 3. 🧠 Hyperlocal Gig Risk Scorer (HGRS) — Our Custom Algorithm
+### 3. Hyperlocal Gig Risk Scorer (HGRS) — Our Custom Algorithm
 
 This is ShieldRun's core ML innovation — a novel risk scoring algorithm built on top of pretrained foundation models using **transfer learning**, purpose-designed for India's gig economy.
 
@@ -153,7 +153,7 @@ ShieldRun's model selection runs at **two distinct levels**. Most teams pick one
 
 ---
 
-#### 📊 Level 1 — Pretrained Base Model Comparison (3 Candidates)
+#### Level 1 — Pretrained Base Model Comparison (3 Candidates)
 
 Training a risk model from scratch requires years of labelled insurance claim data that doesn't exist yet for India's gig sector. Instead, we start with a **pretrained weather/climate foundation model** and extract its internal embeddings as rich input features — rather than raw weather numbers — giving our model a massive head start.
 
@@ -220,7 +220,7 @@ Claim Verified & Paid → Confirmed Disruption Event
 
 ---
 
-### 4. 📊 Level 2 — Final Production Model Comparison (5 Candidates)
+### 4. Level 2 — Final Production Model Comparison (5 Candidates)
 
 Once HGRS is built, it competes against 4 classical ML baselines on the **same India gig dataset**. We do not assume HGRS wins — we prove it.
 
@@ -253,7 +253,7 @@ The model with the best combined score across **RMSE + AUC-ROC + SHAP** is deplo
 
 This is ShieldRun's original fraud prevention mechanism, purpose-built for food delivery workflows.
 
-#### 🔑 The Core Idea
+####The Core Idea
 
 Every pickup location (restaurant / dark kitchen / cloud hub) has a **static Location Key** permanently registered in ShieldRun's system. Every day, the delivery partner receives a **time-bound Daily OTP** pushed directly to their **Zomato / Swiggy / Amazon delivery account** — the same app they already use to accept orders.
 
@@ -284,7 +284,7 @@ When a disruption claim is being evaluated, the system performs a **two-point ke
 └─────────────────────────────────────────────────────────┘
 ```
 
-#### 📍 How It Works Step by Step
+#### How It Works Step by Step
 
 | Step | Event | What ShieldRun Records |
 |---|---|---|
@@ -294,7 +294,7 @@ When a disruption claim is being evaluated, the system performs a **two-point ke
 | **4. Drop-off (OUT)** | Delivery marked complete in platform app | OUT timestamp recorded, delivery window closed |
 | **5. Claim Check** | Disruption event timestamp cross-checked against IN→OUT window | If disruption falls within verified window → claim is legitimate |
 
-#### 🚨 Fraud Scenarios This Catches
+#### Fraud Scenarios This Catches
 
 | Fraud Attempt | How Dual-Key Stops It |
 |---|---|
@@ -304,7 +304,7 @@ When a disruption claim is being evaluated, the system performs a **two-point ke
 | Two partners sharing the same OTP | OTP is single-use, tied to one account → second use flagged immediately |
 | GPS spoofing (fake location) | Location key at pickup is static and hardware-bound — spoofed GPS won't produce a valid key match |
 
-#### 🤖 AI Layer on Top — Isolation Forest Anomaly Detection
+#### AI Layer on Top — Isolation Forest Anomaly Detection
 
 Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass on every claim:
 
@@ -313,7 +313,7 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 - **Cross-partner check:** Multiple partners claiming the same disruption event from the same pickup location in an unusually short window → collusion flag
 - **Output:** Fraud Risk Score (0–100). Score > 70 → auto-reject + flag for insurer review
 
-#### 🔐 Key Security Properties
+#### Key Security Properties
 
 - Daily OTPs are generated using **HMAC-SHA256** — cryptographically signed, cannot be guessed or forged
 - Location static keys are **stored encrypted (AES-256)** in the backend — never exposed client-side
@@ -326,7 +326,7 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 
 ---
 
-## 🖥️ Platform Choice: Mobile-First Web App (PWA)
+## Platform Choice: Mobile-First Web App (PWA)
 
 **Rationale:**
 - Food delivery partners primarily use smartphones (Android, budget tier)
@@ -336,7 +336,7 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React.js** (Web/PWA) — Partner dashboard, policy view, payout history
@@ -368,7 +368,7 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 
 ---
 
-## 📅 Development Plan
+## Development Plan
 
 ### Phase 1 (Weeks 1–2): Ideation & Foundation ✅
 - [x] Finalize persona and disruption triggers
@@ -397,7 +397,7 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 
 ---
 
-## 📊 Key Metrics (Analytics Dashboard — Planned)
+## Key Metrics (Analytics Dashboard — Planned)
 
 **For Workers:**
 - Total earnings protected this week
@@ -414,18 +414,18 @@ Beyond the dual-key check, an **Isolation Forest ML model** runs a second pass o
 
 ---
 
-## 🔐 What We Explicitly Do NOT Cover
+## What We Explicitly Do NOT Cover
 
 Per hackathon constraints, ShieldRun strictly excludes:
-- ❌ Health or medical insurance
-- ❌ Life insurance
-- ❌ Accident coverage
-- ❌ Vehicle repair or maintenance payouts
-- ❌ Any manual/subjective claim — all triggers are parametric and data-driven
+- Health or medical insurance
+- Life insurance
+- Accident coverage
+- Vehicle repair or maintenance payouts
+- Any manual/subjective claim — all triggers are parametric and data-driven
 
 ---
 
-## 🚨 Adversarial Defense & Anti-Spoofing Strategy
+## Adversarial Defense & Anti-Spoofing Strategy
 
 > **Market Crash Response — Phase 1** | A coordinated syndicate of 500 delivery workers organized via Telegram is using GPS spoofing apps to fake locations inside red-alert weather zones, triggering mass false payouts and draining liquidity pools. Simple GPS verification is obsolete. Here is how ShieldRun fights back.
 
@@ -468,7 +468,7 @@ A real stranded worker behaves differently from someone faking it at home. Their
 | **Delivery quality signals** | Past completion rate, time-per-delivery, pickup location diversity consistent | Effort score inflated by fake logins but zero real deliveries |
 | **Historical zone presence** | Regular GPS presence in this zone on prior working days | No prior zone history |
 
-#### 🔐 Hardened Dual-Key System — Addressing Reverse Engineering Risk
+#### Hardened Dual-Key System — Addressing Reverse Engineering Risk
 
 The original dual-key concept is strong but we go further. Keys are **not static** — they are:
 - **Server-generated and time-limited** — new key every 60 seconds
@@ -478,7 +478,7 @@ The original dual-key concept is strong but we go further. Keys are **not static
 
 A reverse-engineered app gets a key that expired 60 seconds ago. Useless.
 
-#### 🔬 Sensor Fusion — Addressing GPS Replay Attacks
+#### Sensor Fusion — Addressing GPS Replay Attacks
 
 Modern spoofers can simulate realistic routes with speed variation and even replay real GPS traces. Our defense goes below the GPS layer:
 
@@ -598,7 +598,7 @@ Tier 3 (strong fraud signals):    Hold + human review within 4 hours
 
 ```
 Basic parametric systems:
-Event detected → GPS in zone → Payout ❌
+Event detected → GPS in zone → Payout 
 
 ShieldRun:
 Event detected → Sensor fusion validates physical presence
@@ -607,20 +607,20 @@ Event detected → Sensor fusion validates physical presence
               → Cross-partner signals rule out ring coordination
               → Hybrid ML scores intent, not just anomaly
               → Tier system protects honest workers
-              → Verified loss → Payout ✅
+              → Verified loss → Payout
 ```
 
 **GPS spoofing attacks the assumption that location = presence. ShieldRun never made that assumption.** A spoofer can fake coordinates. They cannot simultaneously fake inertial sensors, a time-limited hardware-bound OTP key match, platform delivery logs, and absence from a cross-event fraud network. Each layer is independently sufficient. Together they are insurmountable.
 
 ---
 
-## 🔒 Security Architecture
+## Security Architecture
 
 Security is not an afterthought in ShieldRun — it is foundational. We are handling sensitive financial data, GPS location, payout credentials, and insurance policy records for millions of gig workers. Every layer of the stack is designed with security-first principles.
 
 ---
 
-### 1. 🔑 Password & Credential Hashing
+### 1. Password & Credential Hashing
 
 All user credentials are **never stored in plaintext** — ever.
 
@@ -641,7 +641,7 @@ const isValid = await bcrypt.compare(inputPassword, hashedPassword);
 
 ---
 
-### 2. 🪙 Blockchain — Immutable Claim & Policy Ledger
+### 2.Blockchain — Immutable Claim & Policy Ledger
 
 Every policy issuance, parametric trigger event, and payout is recorded on a **private blockchain ledger**. This prevents tampering, ensures auditability, and makes fraud significantly harder.
 
@@ -681,7 +681,7 @@ function createBlock(eventData, previousHash) {
 
 ---
 
-### 3. 🔐 Data Encryption — At Rest & In Transit
+### 3.Data Encryption — At Rest & In Transit
 
 **In Transit (HTTPS / TLS 1.3):**
 - All API communication enforces **TLS 1.3** — older protocols (TLS 1.0, 1.1, SSL) are explicitly rejected
@@ -710,7 +710,7 @@ decrypted_upi = cipher.decrypt(encrypted_upi.encode()).decode()
 
 ---
 
-### 4. 🛡️ Application Security
+### 4.Application Security
 
 **Authentication & Authorization:**
 - **JWT (JSON Web Tokens)** with short expiry (15 min access token + 7-day refresh token)
@@ -731,7 +731,7 @@ decrypted_upi = cipher.decrypt(encrypted_upi.encode()).decode()
 
 ---
 
-### 5. 📍 GPS & Location Data Privacy
+### 5. GPS & Location Data Privacy
 
 Partner GPS data is used only for fraud validation — not stored long-term.
 
@@ -741,7 +741,7 @@ Partner GPS data is used only for fraud validation — not stored long-term.
 
 ---
 
-### 6. 🔍 Security Summary Table
+### 6.Security Summary Table
 
 | Layer | Technology | Protection |
 |---|---|---|
@@ -756,7 +756,7 @@ Partner GPS data is used only for fraud validation — not stored long-term.
 
 ---
 
-## 🗂️ Repository Structure (Planned)
+## Repository Structure (Planned)
 
 ```
 shieldrun/
@@ -773,7 +773,7 @@ shieldrun/
 
 ---
 
-## 👥 Team
+## Team
 
 | Name | Role |
 |---|---|
@@ -785,9 +785,9 @@ shieldrun/
 
 ---
 
-## 🎬 Phase 1 Demo Video
+## Phase 1 Demo Video
 
-> 📹 [Link to 2-minute strategy video — to be added before March 20 EOD]
+> [Link to 2-minute strategy video — to be added before March 20 EOD]
 
 The video covers our persona research, the ShieldRun concept, the weekly premium model, our parametric trigger design, and a walkthrough of our Phase 1 prototype scope.
 
