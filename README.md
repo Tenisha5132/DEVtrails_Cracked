@@ -63,6 +63,92 @@ India's food delivery partners are the last mile of the digital economy — yet 
         ↓
 [Dashboard Updated: Worker Sees Earnings Protected]
 ```
+To better illustrate how the system operates in real-world conditions, the following flow outlines the complete execution pipeline:
+## ⚡ End-to-End Execution Flow (Simplified)
+
+This flow illustrates how ShieldRun detects disruptions, validates claims, and processes payouts in real time.
+
+---
+
+### 1️⃣ Worker Activity Initialization
+- Delivery worker logs into the platform and starts active delivery session  
+- System begins tracking:
+  - Location (pincode-level)
+  - Activity status
+  - Device integrity signals  
+
+---
+
+### 2️⃣ Real-Time Disruption Detection
+- External APIs continuously monitor:
+  - Weather (rainfall, temperature)
+  - AQI levels
+  - Platform outages  
+
+- If threshold is exceeded → **Trigger event generated**
+
+---
+
+### 3️⃣ Eligibility & Context Verification
+System verifies whether the worker qualifies for protection:
+
+- Worker is **active during disruption**
+- Worker is in **affected geographic zone**
+- Worker session is **valid (not idle/inactive)**  
+
+---
+
+### 4️⃣ Fraud Detection & Validation Layer
+Multi-layer checks ensure claim authenticity:
+
+- **GPS consistency check** → prevents location spoofing  
+- **Device integrity validation** → detects emulator/tampering  
+- **Session continuity check** → ensures real activity  
+- **Duplicate claim detection** → avoids repeated payouts  
+
+---
+
+### 5️⃣ AI-Based Risk Evaluation (HGRS)
+- Hyperlocal Gig Risk Scorer evaluates:
+  - Disruption severity  
+  - Zone-level risk  
+  - Historical patterns  
+
+- Outputs:
+  - Risk score  
+  - Confidence level  
+
+---
+
+### 6️⃣ Automated Decision Engine
+Based on validation + AI output:
+
+- **High confidence** → Auto-approve  
+- **Medium confidence** → Soft flag (monitor)  
+- **Low confidence / anomaly** → Reject or hold  
+
+---
+
+### 7️⃣ Instant Payout Execution
+- Approved claims trigger immediate payout via:
+  - UPI / Wallet integration  
+
+- No manual claim filing required  
+
+---
+
+### 8️⃣ Dashboard & Audit Update
+- Worker dashboard updated:
+  - Earnings protected  
+  - Claim history  
+
+- System logs stored in:
+  - Secure database  
+  - Blockchain audit layer (immutable records)  
+
+---
+
+> This pipeline ensures a **fully automated, fraud-resistant, and real-time insurance system**, eliminating delays and manual intervention.
 
 ---
 
@@ -98,6 +184,71 @@ Weekly Premium = Base Rate × Zone Multiplier × Season Factor × (1 - Loyalty D
 ```
 
 ---
+## 📊 Financial Viability & Loss Ratio
+
+ShieldRun ensures long-term sustainability by maintaining a balanced relationship between premiums collected and payouts made.
+
+---
+
+### 📐 Loss Ratio Formula
+
+**Loss Ratio = Total Payout / Total Premium Collected**
+
+---
+
+### 📈 Example Scenario
+
+- **Total premium collected (1000 users):** ₹50,000/week  
+- **Total payout during disruptions:** ₹35,000  
+
+**Loss Ratio = 35,000 / 50,000 = 0.7**
+
+---
+
+### 📊 Interpretation
+
+- **Loss Ratio < 1** → Sustainable system  
+- **Loss Ratio > 1** → High risk, requires premium adjustment  
+
+---
+
+### ⚙️ System Behavior
+
+- If **loss ratio increases** → Premium auto-adjusts in the next cycle  
+- If **loss ratio is stable** → Users may receive reduced pricing  
+
+---
+
+> This dynamic adjustment ensures both **financial sustainability** and **fair pricing** for users.
+
+---
+
+## 🛡️ Coverage & Exclusions
+
+ShieldRun follows a strict **parametric insurance model**, where payouts are triggered only by externally verifiable disruptions affecting delivery activity.
+
+---
+
+### ✅ Covered Events (Income Loss Only)
+
+- Heavy rainfall disrupting delivery operations  
+- Extreme heat reducing delivery activity  
+- Hazardous AQI levels affecting outdoor work  
+- Civic restrictions (bandh, curfew, closures)  
+- Platform outages preventing order allocation  
+
+---
+
+### ❌ Not Covered
+
+- Health or medical issues  
+- Accidents or injuries  
+- Vehicle damage or repair costs  
+- Personal unavailability (non-working hours)  
+
+---
+
+> Only measurable, external events are considered valid triggers for automated payouts.
 
 ## Parametric Triggers (Automated — Zero Touch)
 
