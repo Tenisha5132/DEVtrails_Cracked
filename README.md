@@ -256,11 +256,97 @@ Parametric insurance pays out based on **objective data conditions**, not manual
 
 | Trigger | API Source | Threshold | Payout |
 |---|---|---|---|
-| Heavy Rain | OpenWeatherMap / IMD API | > 15mm/hr in partner's pincode | Daily earnings × 80% |
-| Extreme Heat | OpenWeatherMap | Temp > 42°C for 3+ hrs | Daily earnings × 50% |
-| Hazardous AQI | CPCB AQI API (mock) | AQI > 300 | Daily earnings × 60% |
-| Civic Strike/Bandh | Government alert feed (mock) | Verified zone lockdown | Daily earnings × 100% |
-| Platform Outage | Zomato/Swiggy status mock API | Downtime > 2 hrs | Daily earnings × 90% |
+| Heavy Rain | OpenWeatherMap / IMD API | > 15mm/hr in partner's pincode | Triggers Evaluation |
+| Extreme Heat | OpenWeatherMap | Temp > 42°C for 3+ hrs | Triggers Evaluation |
+| Hazardous AQI | CPCB AQI API (mock) | AQI > 300 | Triggers Evaluation |
+| Civic Strike/Bandh | Government alert feed (mock) | Verified zone lockdown | Triggers Evaluation |
+| Platform Outage | Zomato/Swiggy status mock API | Downtime > 2 hrs | Triggers Evaluation |
+
+---
+
+### 💡 Outcome-Based Payout Model (Replaces Fixed Parametric Payouts)
+
+ShieldRun does not assign fixed payouts per event. Instead, it computes **actual income loss dynamically** using a hybrid AI-based evaluation.
+
+**Core Function:**
+
+```text
+Payout = max(0, Expected Earnings (E) − Actual Earnings (A)) × Effort Score (S) × Confidence Score (C)
+```
+
+---
+
+### 📊 Variable Definitions
+
+* **Expected Earnings (E):**
+  Estimated income under normal conditions using:
+
+  * historical earnings pattern
+  * working hours
+  * zone demand
+  * real-time event impact
+
+* **Actual Earnings (A):**
+  Verified earnings from platform activity (deliveries, timestamps, GPS validation)
+
+* **Effort Score (S ∈ [0,1]):**
+  Measures worker engagement:
+
+  * login duration
+  * order acceptance rate
+  * movement consistency
+
+* **Confidence Score (C ∈ [0,1]):**
+  Measures reliability of the detected disruption:
+
+  * trigger data accuracy
+  * location certainty
+  * fraud validation signals
+
+---
+
+### ⚠️ Important Behavior
+
+* If **Actual ≥ Expected → No payout**
+* Events do NOT automatically guarantee payout
+* This prevents overcompensation during high-demand disruptions
+
+---
+
+### 🧠 Decision Layer (Post-Payout Calculation)
+
+The computed payout is not immediately released — it is passed through a decision layer aligned with the fraud detection system:
+
+* **High Confidence (≥ 0.85)**
+  → Full payout released instantly
+
+* **Medium Confidence (0.50 – 0.84)**
+  → 60% payout released immediately
+  → Remaining 40% released after background verification
+
+* **Low Confidence (< 0.50 or high fraud score)**
+  → Payout held for review
+
+---
+
+### 🔗 System Alignment
+
+This payout logic integrates directly with:
+
+* **HGRS (Risk Scoring Model)** → evaluates disruption severity
+* **Fraud Detection Engine** → outputs Fraud Risk Score
+* **Effort Score (S)** → already defined in system
+* **Confidence Score (C)** → already defined in system
+
+---
+
+### ⚡ Final Execution Flow
+
+```text
+Trigger → Evaluation → Expected vs Actual → Payout Function → Decision Layer → Payout Execution
+```
+
+---
 
 **Claim Initiation:** Fully automatic. Partner receives a push notification: *"Heavy rain detected in your zone. Your claim is being processed."*
 
@@ -290,15 +376,15 @@ ShieldRun's model selection runs at **two distinct levels**. Most teams pick one
 ┌─────────────────────────────────────────────────────────────┐
 │         LEVEL 1 — Pretrained Base Model Selection           │
 │   Which foundation model do we transfer learn from?         │
-│   3 candidates evaluated → 1 winner selected               │
+│   3 candidates evaluated → 1 winner selected                │
 └───────────────────────┬─────────────────────────────────────┘
                         ↓
               Winner becomes the base of HGRS
                         ↓
 ┌─────────────────────────────────────────────────────────────┐
 │         LEVEL 2 — Final Production Model Selection          │
-│   HGRS vs 4 classical ML models — which is best overall?   │
-│   5 candidates evaluated → 1 deployed to production        │
+│   HGRS vs 4 classical ML models — which is best overall?    │
+│   5 candidates evaluated → 1 deployed to production         │
 └─────────────────────────────────────────────────────────────┘
 ```
 
